@@ -1,0 +1,856 @@
+﻿@font-face {
+	font-family: 'Bible Script Master';
+	src: url('../fonts/Bible Script Master.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GebetsbuchInitialen';
+	src: url('../fonts/GebetsbuchInitialen.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NeugotischeInitialen';
+	src: url('../fonts/NeugotischeInitialen.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Requiem';
+	src: url('../fonts/Requiem.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Blackwood Castle';
+	src: url('../fonts/Blackwood Castle.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'brubeck';
+	src: url('../fonts/brubeck.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Almendra-Regular';
+	src: url('../fonts/Almendra-Regular.ttf') format('truetype');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: antiquewhite;
+	background-image: url('../Images/bread_and_wine.png');
+	background-attachment: fixed;
+}
+
+.container {
+	border: solid 10px saddlebrown;
+	border-radius: 20px;
+	min-height: 100%;
+	margin-top: 100px;
+	margin-bottom: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	width: 800px;
+	background-color: burlywood;
+}
+
+.NavBarTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 30px;
+	width: 100%;
+	background-color: saddlebrown;
+}
+
+.NavBarTop_Container {
+	width: 800px;
+	height: 30px;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+
+.NavBarTop_Welcome {
+	float: left;
+	color: antiquewhite;
+}
+
+.NavBarTop_Login {
+	float: right;
+	color: antiquewhite;
+}
+
+	.NavBarTop_Login a {
+		color: cornsilk;
+		text-decoration: none;
+		-o-transition: .5s;
+		-ms-transition: .5s;
+		-moz-transition: .5s;
+		-webkit-transition: .5s;
+		/* ...and now for the proper property */
+		transition: .5s;
+	}
+
+		.NavBarTop_Login a:hover {
+			color: peru;
+		}
+
+#NavBar_myaccount_menu ul {
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	height: 25px;
+}
+
+	#NavBar_myaccount_menu ul ul {
+		display: inline-block;
+		position: absolute;
+		margin-top: 20px;
+		display: none;
+		left: -40px;
+	}
+
+		#NavBar_myaccount_menu ul ul li {
+			background-color: brown;
+			border: 2px solid cornsilk;
+			width: 100px;
+			padding: 10px;
+			z-index: 9;
+		}
+
+	#NavBar_myaccount_menu ul:hover ul {
+		display: inline-block;
+	}
+
+#headwrapper {
+	display: flex;
+	padding: 0px 10px;
+}
+
+#headertitle {
+	display: flex;
+	justify-content: center;
+}
+
+#headertitle_text_container {
+	width: 300px;
+	align-self: center;
+	font-family: Requiem;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.5em;
+	color: brown
+}
+
+#headmenu_container {
+	display: flex;
+	justify-content: center;
+	height: 100px;
+	width: 100%;
+}
+
+#headmenu {
+	font-size: 15px;
+	align-self: center;
+}
+
+	#headmenu ul {
+		text-align: center;
+	}
+
+	#headmenu li {
+		display: inline;
+		padding: 0 9px;
+		border-left: solid 1px cornsilk;
+		font-weight: bold;
+		color: cornsilk;
+	}
+
+	#headmenu a {
+		color: cornsilk;
+		text-decoration: none;
+		-o-transition: .5s;
+		-ms-transition: .5s;
+		-moz-transition: .5s;
+		-webkit-transition: .5s;
+		/* ...and now for the proper property */
+		transition: .5s;
+	}
+
+		#headmenu a:hover {
+			color: peru;
+		}
+
+	#headmenu li:first-child {
+		border-left: none;
+	}
+
+#default_article, #aboutus_article {
+	padding: 40px 50px;
+	background-size: 100%;
+}
+
+#article_wrapper {
+	box-shadow: -10px 20px 20px 5px saddlebrown;
+	border: 3px solid saddlebrown;
+	background-color: rgba(139, 69, 19, 0.6);
+	padding: 30px 30px 50px 30px;
+}
+
+	#article_wrapper p {
+		font-family: Almendra-Regular;
+		font-size: 20px
+	}
+
+#topBanner {
+	clear: both;
+	border-top: solid 5px saddlebrown;
+	border-bottom: solid 5px saddlebrown;
+	width: 800px;
+	height: 150px;
+	background-color: brown;
+}
+
+	#topBanner img {
+		position: absolute;
+	}
+
+.dropcap {
+	float: left;
+	border: 3px solid cornsilk;
+	padding: 32px 0;
+	background-color: rgba(80, 1, 1, 0.80);
+	color: burlywood;
+	font-size: 100px;
+	font-family: Blackwood Castle;
+	/*text-shadow: -5px 5px 3px #883F2A;*/
+	box-shadow: -10px 9px 11px #883F2A;
+}
+
+.p1 {
+	line-height: 1.5em;
+	font-size: 17px;
+	color: white;
+}
+
+#QuoteOfDay1_Wrapper {
+	float: right;
+	padding: 20px;
+	margin: 25px;
+	border: 1px solid brown;
+	background-color: antiquewhite;
+	box-shadow: -10px 10px 8px saddlebrown;
+}
+
+#QuoteOfDay1 {
+	background-color: #883F2A;
+	padding: 12px;
+	width: 100px;
+	font-size: 1em;
+	font-family: 'Bible Script';
+	color: cornsilk;
+}
+
+#QuoteOfDay2_Wrapper {
+	float: left;
+	padding: 20px;
+	margin: 0px 30px 0px 0px;
+	border: 1px solid brown;
+	background-color: antiquewhite;
+	box-shadow: -10px 10px 8px saddlebrown;
+}
+
+#QuoteOfDay2 {
+	background-color: #883F2A;
+	padding: 12px;
+	width: 200px;
+	font-size: 1em;
+	font-family: 'Bible Script';
+	color: cornsilk;
+}
+
+.Login_body_container {
+	border: solid 10px saddlebrown;
+	min-height: 100%;
+	height: 800px;
+	margin-top: 100px;
+	margin-bottom: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	width: 800px;
+	background-color: burlywood;
+}
+
+.Login_Container {
+	margin: 0px auto;
+	margin-top: 50px;
+	width: 600px;
+	height: 400px;
+	background-color: brown;
+	border-radius: 10px;
+	border: 15px solid antiquewhite;
+}
+
+.Login_Content {
+	color: cornsilk;
+	padding: 50px 0;
+}
+
+.JesusIsKing_Label {
+	font-size: 44px;
+	margin: 0 auto;
+	width: 300px;
+	padding: 30px 0;
+	font-family: Requiem;
+}
+
+.JesusIsKing_Menu {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.Login_menu {
+	color: white;
+}
+
+.Login_button_submit {
+	background-color: #fff5e5;
+	border-radius: 10px;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.Login_register_link a {
+	color: cornsilk;
+	text-decoration: none;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	/* ...and now for the proper property */
+	transition: .5s;
+}
+
+	.Login_register_link a:hover {
+		color: peru;
+	}
+
+.register_new_user_container {
+	padding-top: 25px;
+	padding-bottom: 100px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.register_new_user_wrapper {
+	position: relative;
+	background-color: brown;
+	border: 20px solid cornsilk;
+	width: 600px;
+	height: 400px;
+	margin: 0 auto;
+	color: cornsilk;
+}
+
+.register_new_user_content {
+	padding: 50px 75px;
+}
+
+.register_new_user_header {
+	padding-bottom: 20px;
+	width: 800px;
+	font-size: 40px;
+	font-family: Requiem;
+}
+
+.register_new_user_signup_inputs {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.register_new_user_submit_btn {
+}
+
+#bible_verses_container {
+	display: flex;
+	width: 800px;
+	min-height: 700px;
+	background-image: url('../Images/Old_Scroll_Paper.jpg');
+	background-size: cover;
+	box-shadow: #520202 10px 10px 10px inset, #520202 -10px -10px 10px inset;
+}
+
+#bible_verses_text_container {
+	margin: 100px auto;
+	background-color: rgba(80, 1, 1, 0.80);
+	padding: 60px;
+	border: 20px solid burlywood;
+	box-shadow: saddlebrown -20px 10px 10px
+}
+
+#votd {
+	font-size: 40px;
+	width: 500px;
+	font-family: 'Baskerville Old Face';
+	color: white;
+}
+
+#loading_gif {
+	padding: 200px;
+}
+
+#bookName {
+	text-transform: uppercase;
+	text-align: center;
+	font-family: Requiem;
+	color: white;
+	font-size: 50px;
+}
+
+#bookChapter {
+	float: left;
+	margin-top: 50px;
+}
+
+#bookVerse {
+	float: right;
+	margin-top: 50px;
+}
+
+#bookText {
+	clear: both;
+	margin-top: 150px;
+}
+
+
+#grace_baptist_img_container {
+	position: relative;
+	float: right;
+	height: 150px;
+	width: 237px;
+	padding: 20px;
+}
+
+	#grace_baptist_img_container img {
+		position: absolute;
+		height: 150px;
+		border-radius: 10px;
+		transition: all .2s ease-in-out;
+		z-index: 12;
+	}
+
+		#grace_baptist_img_container img:hover {
+			transform: scale(3) translateX(-53px);
+			border: 10px white solid;
+		}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	visibility: hidden;
+	z-index: 11;
+}
+
+
+#contact_us_container {
+	padding: 50px 100px;
+}
+
+#contact_us_wrapper {
+	width: 550px;
+	height: 300px;
+	padding: 20px;
+	color: white;
+	background-color: #883F2A;
+	border: 20px solid white;
+	box-shadow: #520202 -5px 20px 50px;
+}
+
+	#contact_us_wrapper > div:first-child {
+		float: left;
+	}
+
+#address_text_top {
+	margin-top: 60px;
+	font-size: 20px;
+}
+
+#address_text_bottom {
+	margin-top: 50px;
+}
+
+#TestiHead {
+	padding: 30px;
+	font-family: 'Bible Script';
+	font-size: 18px;
+	color: black;
+}
+
+#TestiBottomComment_Wrapper {
+	padding: 30px 30px 30px 30px;
+	background-color: #8B110A;
+	box-shadow: #3c0808 -10px 15px 15px inset;
+}
+
+#TestiBottomComment_Container {
+	background-color: #8B110A;
+	margin-bottom: 15px;
+}
+
+#TestiBottomComment {
+	border: 9px solid cornsilk;
+	background: burlywood;
+	box-shadow: -10px 8px 10px #520202;
+	padding: 15px;
+}
+
+#flag {
+	float: right;
+	margin-top: 20px;
+	margin-right: 70px;
+	width: 110px;
+	height: 200px;
+	padding-top: 10px;
+	position: relative;
+	background-color: gold;
+	box-shadow: #883F2A -7px 5px 10px inset;
+	box-shadow: #883F2A -8px 5px 10px;
+	color: #d57a0b;
+	font-size: 11px;
+	letter-spacing: 0.2em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#Comment_Page_Button_Wrapper {
+}
+
+
+
+#Comment_Page_Button {
+	display: inline-block;
+	background: saddlebrown;
+	border: solid 1px #520202;
+	padding: 2px, 12px, 2px, 12px;
+	width: 50px;
+	text-align: center;
+	box-shadow: -13px 2px 12px black;
+}
+
+	#Comment_Page_Button a {
+		color: cornsilk;
+		text-decoration: none;
+		-o-transition: .5s;
+		-ms-transition: .5s;
+		-moz-transition: .5s;
+		-webkit-transition: .5s;
+		/* ...and now for the proper property */
+		transition: .5s;
+	}
+
+		#Comment_Page_Button a:hover {
+			color: peru;
+		}
+
+
+#comment_info_div_wrapper {
+	background-color: antiquewhite;
+	margin: 20px;
+	padding: 20px;
+}
+
+#comment_info_div {
+	background-color: brown;
+	padding: 40px;
+}
+
+	#comment_info_div span {
+		color: cornsilk;
+	}
+
+#comment_info_table td {
+	color: cornsilk;
+	padding-bottom: 10px;
+}
+
+.comment_anon {
+	width: 400px;
+	height: 35px;
+}
+
+.comment_textbox {
+	width: 400px;
+	height: 200px;
+}
+
+#commentText_RFvalid {
+	vertical-align: top;
+}
+
+.comment_box_loggedin {
+	width: 500px;
+	height: 200px;
+	margin-top: 20px;
+}
+
+.Comment_Loggedin_SubmitButton {
+	margin-left: 390px;
+	margin-top: 20px;
+	background-color: #fff5e5;
+	border-radius: 10px;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.PrayForUs_TextArea_TableCell {
+	padding-top: 30px;
+}
+
+.PrayForUs_TextBox {
+	height: 150px;
+	width: 600px;
+}
+
+.PrayForUs_TextArea_SubmitButton {
+	padding-top: 40px;
+}
+
+.PrayForUs_SubmitButton {
+	float: right;
+	margin-right: 20px;
+	background-color: #fff5e5;
+	border-radius: 10px;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.PrayForUs_PrayQuestion {
+	padding-top: 30px;
+}
+
+.PrayForUs_FirstLast {
+	padding-right: 10px;
+	padding-left: 20px
+}
+
+.Brown_Backdrop {
+	background-color: #751515;
+	border: 30px solid antiquewhite;
+	height: 800px;
+	box-shadow: #520202 -5px 20px 50px;
+	color: antiquewhite;
+}
+
+.PrayFoUs_Summary {
+	padding: 50px;
+}
+
+	.PrayFoUs_Summary h1 {
+		font-family: Requiem;
+		font-size: 42px;
+		padding-bottom: 20px;
+	}
+
+	.PrayFoUs_Summary p {
+		padding: 0px 10px;
+	}
+
+.error-validation {
+	color: red;
+}
+
+.valid-validation {
+	color: green;
+}
+
+.Brown_Backdrop table {
+	padding: 20px;
+}
+
+.Bible_Brown_Backdrop {
+	position: relative;
+	background-image: url('../Images/bible-wallpaper-8.jpg');
+	background-size: 800px;
+	border: 30px solid antiquewhite;
+	height: 530px;
+	box-shadow: #520202 -5px 20px 50px;
+	color: antiquewhite;
+}
+
+.Bible_Table_Wrapper_Overlay {
+	background-color: rgba(136, 63, 42, .7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.Bible_Text h1 {
+	padding-top: 30px;
+	font-family: Requiem;
+	font-size: 44px;
+}
+
+.Bible_Text p {
+	padding-top: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 20px;
+}
+
+	.Bible_Text p:nth-child(2) {
+		padding-top: 30px;
+	}
+
+.Bible_Table_wrapper {
+	padding: 0px 100px;
+}
+
+.Bible_SubmitButton {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff5e5;
+	border-radius: 10px;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+
+.container_footer_container {
+	width: 100%;
+	padding: 100px 0px;
+	background-color: saddlebrown;
+}
+
+
+.container_footer_wrapper {
+	width: 700px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.container_footer_wrapper ul {
+	list-style: none;
+	color: cornsilk;
+	font-size: 18px;
+}
+
+.container_footer_left {
+	float: left;
+	margin-left: 100px;
+}
+
+.container_footer_right {
+	float: right;
+	margin-right: 100px;
+}
+
+.container_footer_footer {
+	clear: both;
+	width: 100%;
+	color: cornsilk;
+	text-align: center;
+	margin-top: 125px;
+}
+
+#foot {
+	clear: both;
+	background-color: saddlebrown;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 4px brown solid;
+}
+
+#foot ul {
+	text-align: center;
+}
+
+#foot li {
+	color: cornsilk;
+	font-size: 14px;
+	display: inline;
+	padding: 0 10px;
+	border-left: solid 1px cornsilk;
+}
+
+	#foot li:first-child {
+		border-left: none;
+	}
+
+#foot a {
+	color: cornsilk;
+	text-decoration: none;
+}
+
+	#foot a:hover {
+		color: peru;
+		-o-transition: .5s;
+		-ms-transition: .5s;
+		-moz-transition: .5s;
+		-webkit-transition: .5s;
+		/* ...and now for the proper property */
+		transition: .5s;
+	}

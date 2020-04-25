@@ -1,0 +1,31 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AskChurch.aspx.cs" Inherits="aspx_AskChurch" %>
+
+<!DOCTYPE html>
+
+<%@ Register Src="~/UserControls/HeadOfPage.ascx" TagPrefix="uc1" TagName="HeadOfPage" %>
+<%@ Register Src="~/UserControls/FooterOfPage.ascx" TagPrefix="uc1" TagName="FooterOfPage" %>
+
+<% Page.Title = "Ask about Church"; %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%= Page.Title %></title>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link href="/css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/js/JavaScript.js"></script>
+</head>
+<body>
+<div id="container">
+
+    <uc1:HeadOfPage runat="server" ID="HeadOfPage" />
+
+    <div>Which Church is right for you?!</div>
+
+</div>
+
+<uc1:FooterOfPage runat="server" ID="FooterOfPage" />
+</body>
+</html>
